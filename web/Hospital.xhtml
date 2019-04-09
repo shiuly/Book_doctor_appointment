@@ -1,0 +1,136 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+               <title>Facelet Title</title>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        
+        <link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
+        <script src="js/bootstrap.min.js" type="text/javascript"></script>
+        <style>
+            /* Remove the navbar's default margin-bottom and rounded borders */ 
+            .navbar {
+                margin-bottom: 0;
+                border-radius: 0;
+            }
+
+            /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+            .row.content {height: 450px}
+
+            /* Set gray background color and 100% height */
+            .sidenav {
+                padding-top: 20px;
+                background-color: #f1f1f1;
+                height: 100%;
+            }
+
+            /* Set black background color, white text and some padding */
+            footer {
+                background-color:whitesmoke;
+                color: black;
+                padding: 15px;
+            }
+
+            /* On small screens, set height to 'auto' for sidenav and grid */
+            @media screen and (max-width: 767px) {
+                .sidenav {
+                    height: auto;
+                    padding: 15px;
+                }
+                .row.content {height:auto;} 
+            }
+        </style>
+
+    </h:head>
+    <h:body>
+          <!--   NavBar Starting     -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#"><img src="pic/logo.png" alt="logo"/></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.xhtml">HOME <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">HOW TO USE <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            REGISTRATION
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="patientBookAppointment.xhtml">Patient Registration</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Hospital registration</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Doctor Registration</a>
+                        </div>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">APPOINTMENT <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="adminlogin.jsp"> ADMINLOGIN <span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
+
+
+        <!--   NavBar Closing     -->
+        <hr></hr>
+        
+        <h:form id="form" style="margin-top: 5px ;margin-bottom: 5px">  
+            <p:growl id="msgs" showDetail="true" />
+
+            <center><h3 style="font-family:bold " >Hospital Details</h3></center>
+            <p:accordionPanel>
+                <p:tab title="Square Hospital">
+                    <h:panelGrid columns="2" cellpadding="10">
+                        <p:graphicImage  library="images" name="a1.jpg" />
+                       
+
+
+                        <h:outputText
+                            value="The story begins as Don Vito Corleone, the head of a New York Mafia family, oversees his daughter's wedding. 
+                            His beloved son Michael has just come home from the war, but does not intend to become part of his father's business.
+                            Through Michael's life the nature of the family business becomes clear. The business of the family is just like the head of the family, kind and benevolent to those who give respect, 
+                            but given to ruthless violence whenever anything stands against the good of the family." />
+                    </h:panelGrid>
+                </p:tab>
+                <p:tab title="Dhaka Medical">
+                    <h:panelGrid columns="2" cellpadding="10">
+                        <p:graphicImage  library="images" name="d.jpg" />
+                        <h:outputText value="Francis Ford Coppola's legendary continuation and sequel to his landmark 1972 film, The_Godfather, parallels the young Vito Corleone's rise with his son Michael's spiritual fall, deepening The_Godfather's depiction of the dark side of the American dream. 
+                                      In the early 1900s, the child Vito flees his Sicilian village for America after the local Mafia kills his family. Vito struggles to make a living, legally or illegally, for his wife and growing brood in Little Italy, 
+                                      killing the local Black Hand Fanucci after he demands his customary cut of the tyro's business. With Fanucci gone, Vito's communal stature grows." />
+                    </h:panelGrid>
+                </p:tab>
+                <p:tab title="National Medical">
+                    <h:panelGrid columns="2" cellpadding="10">
+                        <p:graphicImage  library="images" name="c1.jpg" />
+                        <h:outputText value="After a break of more than 15 years, director Francis Ford Coppola and writer Mario Puzo returned to the well for this third and final story of the fictional Corleone crime family. 
+                                      Two decades have passed, and crime kingpin Michael Corleone, now divorced from his wife Kay has nearly succeeded in keeping his promise that his family would one day be completely legitimate." />
+                    </h:panelGrid>
+                </p:tab>
+            </p:accordionPanel>
+
+
+        </h:form>
+    </h:body>
+</html>
+

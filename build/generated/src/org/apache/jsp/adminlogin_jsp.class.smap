@@ -1,0 +1,18 @@
+SMAP
+adminlogin_jsp.java
+JSP
+*S JSP
+*F
++ 0 adminlogin.jsp
+adminlogin.jsp
+*L
+1,123:45
+125,27:170
+151,33:197
+183,5:230
+187,2:235
+189:237,5
+190,2:242
+193,9:246
+201,75:255
+*E
